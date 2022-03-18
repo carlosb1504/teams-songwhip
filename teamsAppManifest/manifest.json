@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0",
+  "id": "74d24814-e566-4c28-b52b-73780d4416ea",
+  "packageName": "com.microsoft.teams.samples.searchExtension",
+  "developer": {
+    "name": "Absolute Bangers inc.",
+    "websiteUrl": "https://example.azurewebsites.net",
+    "privacyUrl": "https://example.azurewebsites.net/privacy",
+    "termsOfUseUrl": "https://example.azurewebsites.net/termsofuse"
+  },
+  "name": {
+    "short": "Share Music",
+    "full": "Share Music with Songwhip"
+  },
+  "description": {
+    "short": "Songwhip Teams integration for sharing music links",
+    "full": "Share a music link from Spotify, Apple Music, YouTube, etc, and convert it to a Songwhip page that everyone can access."
+  },
+  "icons": {
+    "outline": "icon-512x512.png",
+    "color": "icon-512x512.png"
+  },
+  "accentColor": "#abcdef",
+  "composeExtensions": [
+    {
+      "botId": "74d24814-e566-4c28-b52b-73780d4416ea",
+      "canUpdateConfiguration": true,
+      "commands": [
+        {
+          "id": "searchQuery",
+          "context": [ "compose" ],
+          "description": "Add a shared link from Spotify, Apple Music, Youtube, etc.",
+          "title": "Search",
+          "type": "query",
+          "parameters": [
+            {
+              "name": "searchQuery",
+              "title": "Music Link",
+              "description": "Enter Music Link",
+              "inputType": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
