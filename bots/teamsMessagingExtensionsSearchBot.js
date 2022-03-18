@@ -7,9 +7,9 @@ const { TeamsActivityHandler, CardFactory,MessageFactory, ConsoleTranscriptLogge
 const fs = require('fs');
 const AdaptiveCard = require('../Resources/RestaurantCard.json');
 const ConnectorCard = require('../Resources/ConnectorCard.json');
-const configuration = require('dotenv').config();
-const env = configuration.parsed;
-const baseurl = env.BaseUrl;
+// const configuration = require('dotenv').config();
+// const env = configuration.parsed;
+const baseurl = process.env.BaseUrl;
 const publicDir = require('path').join(__dirname,'../public/Images'); 
 
 class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
